@@ -6,7 +6,7 @@ from pathlib import Path
 # ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = project_dir = Path(__file__).resolve().parents[1]
 
-app = Flask(__name__,static_folder=os.path.join("..", "client", "build"),static_url_path='')
+app = Flask(__name__,static_folder=os.path.join(os.getcwd(), "..", "client", "build"),static_url_path='')
 
 @app.route("/")
 def index():
