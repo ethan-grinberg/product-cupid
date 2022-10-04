@@ -10,7 +10,7 @@ app = Flask(__name__,static_folder=os.path.join(project_dir, "client", "build"),
 
 @app.route("/")
 def index():
-    print(os.curdir())
+    print(os.getcwd())
     print(app.static_folder)
 
     return send_from_directory(app.static_folder, 'index.html')
