@@ -1,12 +1,17 @@
 from flask import Flask, send_from_directory
+import os
+from pathlib import Path
 
-app = Flask(__name__,static_folder='../client/build',static_url_path='')
+
+# ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = project_dir = Path(__file__).resolve().parents[1]
+app = Flask(__name__,static_folder=os.path.join(project_dir, "client", "build"),static_url_path='')
 
 @app.route("/")
 def index():
+    print(app.static_folder)
 
-    # return send_from_directory(app.static_folder, 'index.html')
-    return app.static_folder
+    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route("/test")
 def test():
