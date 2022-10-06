@@ -1,4 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import "./App.css";
 
 function App() {
   const [data, setData] = useState([{}])
@@ -14,16 +20,21 @@ function App() {
   }, [])
 
   return (
-    <div>
-      {(typeof data.test == 'undefined') ? (
-        <p>Loading...</p>
-      ): (
-        data.test.map((t, i) => (
-          <p key={i}>{t}</p>
-        ))
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Stack spacing={2} direction="row">
+        {(typeof data.test == 'undefined') ? (
+          <p>Loading...</p>
+        ): (
+          data.test.map((t, i) => (
+            <Button variant="contained">{t}</Button>
+          ))
 
-      )}
-    </div>
+        )}
+      </Stack>
+      </Container>
+    </React.Fragment>
   );
 }
 
