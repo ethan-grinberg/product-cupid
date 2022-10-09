@@ -3,17 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { ButtonGroup, CardActionArea } from '@mui/material';
-import Button from '@mui/material/Button'
-import CardActions from '@mui/material/CardActions';
-import Box from "@mui/material/Box"
-import Grid from "@mui/material/Grid"
-import IconButton from '@mui/material/IconButton';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownIcon from '@mui/icons-material/ThumbDown';
-import Rating from '@mui/material/Rating';
-import React, {useState, useEffect} from 'react'
-
+import {CardActionArea } from '@mui/material';
+import React from 'react';
 
 class Product extends React.Component {
    render() {

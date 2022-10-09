@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./App.css";
 import Grid from "@mui/material/Grid"
-import { responsiveFontSizes, styled } from '@mui/material/styles';
 import Product from "./Product";
-import Paper from '@mui/material/Paper';
 import axios from 'axios';
 
 
