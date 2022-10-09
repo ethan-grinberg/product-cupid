@@ -14,8 +14,9 @@ class App extends React.Component {
     this.state = {"product0": "none", "product1": "none"}
   }
 
-   handleClick = (id) => {
-    axios.get(`/products/${id}`)
+   handleClick = (id, order) => {
+    console.log(order)
+    axios.get(`/products/${id}/${order}`)
       .then((response) => {
         console.log(response.data)
         this.setState({"product0": response.data[0]}) 
@@ -42,10 +43,10 @@ class App extends React.Component {
           justifyContent="center"
           style={{ minHeight: '100vh' }}>
           <Grid item>
-            <Product handleClick={this.handleClick} product={this.state.product0}/>
+            <Product handleClick={this.handleClick} product={this.state.product0} order="0"/>
           </Grid>
           <Grid item>
-            <Product handleClick={this.handleClick} product={this.state.product1}/>
+            <Product handleClick={this.handleClick} product={this.state.product1} order="1"/>
           </Grid>
         </Grid>
       </div>
