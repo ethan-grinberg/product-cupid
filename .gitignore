@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 /env
+
+/__pychache__
+__pycache__/get_data.cpython-38.pyc
