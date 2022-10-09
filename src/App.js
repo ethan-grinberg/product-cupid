@@ -14,14 +14,14 @@ class App extends React.Component {
     this.state = {"product0": "none", "product1": "none"}
   }
 
-   handleClick(id) {
-    console.log(id)
-    // axios.get(`/products/${id}`)
-    //   .then((response) => {
-    //     this.setState({"product0": response.data[0]}) 
-    //     this.setState({"product1": response.data[1]})
-    //   })
-    //   .catch(error => console.error('Error: ${error}'));
+   handleClick = (id) => {
+    axios.get(`/products/${id}`)
+      .then((response) => {
+        console.log(response.data)
+        this.setState({"product0": response.data[0]}) 
+        this.setState({"product1": response.data[1]})
+      })
+      .catch(error => console.error(`Error: ${error}`));
   }
 
   componentDidMount() {

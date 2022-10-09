@@ -18,10 +18,9 @@ def products():
     #     session['items'] = []
     return get_rand_items()
 
-# @app.route("/products/<int:prod_id>")
-# def favorite_product(prod_id):
-#     session["curr_best"] = prod_id
-#     return get_rand_items(session)
+@app.route("/products/<int:prod_id>")
+def favorite_product(prod_id):
+    return get_rand_items(prod_id)
 
 
 if __name__ == "__main__":
