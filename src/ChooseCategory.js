@@ -8,19 +8,26 @@ import Container from '@mui/material/Container';
 class ChooseCategory extends React.Component {
     render() {
         return (
-            <Container sx={{'minWidth': 100, alignItems: "center", height: '60vh'}}>
+            <Container sx={{'minWidth': 150, height: '60vh'}}>
             <FormControl sx={{'minWidth':150}}>
-            <InputLabel id="simple-select">
+            <InputLabel id="simple-select-label">
                 Category
             </InputLabel>
               <Select
-              labelId="simple-select"
-                alignItems = "center"
+                labelId="simple-select-label"
+                id="simple-select"
                 label = "Category"
+                value={this.props.current_cat}
+                onChange={event=> this.props.handleChangeCat(event)}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value="">
+                <em>Category</em>
+                </MenuItem>
+                {this.props.categories.map((category) => (
+                    <MenuItem key={category} value={category} >
+                        {category}
+                    </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Container>)
