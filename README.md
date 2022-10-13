@@ -1,5 +1,11 @@
 # ProductCupid
-ADV492 Project
+A fun product comparison app to find the products you love!
+
+_Made for ADV492 Fall 2022_
+
+# Project Links
+- [project website](https://sites.google.com/illinois.edu/productcupid)
+- [web app](https://product-cupid.herokuapp.com/)
 
 # Tech Stack
 - python `Flask` backend
@@ -31,4 +37,4 @@ ADV492 Project
   - Or just run `npm start` to see front end without build at port `3000`
 
 ## Publishing Changes
-Once you commit and push your changes they will be live on https://product-cupid.herokuapp.com/
+Once you commit and push your changes to your own branch and it will open up a pull request. Once the pull request is merged changes will be live on https://product-cupid.herokuapp.com/
