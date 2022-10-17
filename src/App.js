@@ -3,6 +3,7 @@ import "./App.css";
 import Grid from "@mui/material/Grid"
 import Product from "./Product";
 import ChooseCategory from './ChooseCategory';
+import Header from './Header';
 import axios from 'axios';
 
 
@@ -51,6 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App-header" >
+        <Header  />
         <Grid container spacing={1} 
           direction="row"
           alignItems="center"
